@@ -10,18 +10,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Inherit some risingOSS stuff.
-RISING_MAINTAINER := SKetU-l
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_USE_PIXEL_FINGERPRINT := true
-TARGET_BUILD_APERTURE_CAMERA := true
-TARGET_ENABLE_BLUR := true
-TARGET_HAS_UDFPS := false
 
 # Some GMS flags
-# WITH_GMS := true
+WITH_GMS := true
 # TARGET_CORE_GMS := true
 # TARGET_USE_GOOGLE_TELEPHONY := false
 
@@ -29,7 +24,7 @@ TARGET_HAS_UDFPS := false
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_X00TD
+PRODUCT_NAME := arrow_X00TD
 PRODUCT_DEVICE := X00TD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Zenfone Max Pro M1
