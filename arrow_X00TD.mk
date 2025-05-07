@@ -15,10 +15,8 @@ $(call inherit-product, vendor/arrow/config/common.mk)
 # Inherit some risingOSS stuff.
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# Some GMS flags
-WITH_GMS := true
-# TARGET_CORE_GMS := true
-# TARGET_USE_GOOGLE_TELEPHONY := false
+# GMS build flags
+ARROW_GAPPS := true
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
